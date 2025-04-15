@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Meczownik.pl</title>
+        <script src="scripts/jquery-3.7.1.js"></script>
+    </head>
+    <body>
+        <div id="header">
+            <button>Home</button>
+            <button>Wybór lig</button>
+            <button>Transmisja</button>
+            <button>Newsy</button>
+            <img src="image/ChatGPT Image 15 kwi 2025, 00_04_01.png">
+        </div>
+        <div id="holder_transmisji">
+            <h1>⚽ Transmisja z kolejki tygodnia! ⚽</h1>
+            <img src="image/przykładowy_baner.jpg">
+            <h2>Orzeł Ząbkowice Śląskie vs Lechia Dzierżoniów</h2>
+            <h3>5 kwietnia 17:30</h3>
+        </div>
+        <div id="wyszukiwarka">
+            <div class="polowka1">
+                <h1>👇 Najdź drużynę z swojej miejscowości! 👇</h1>
+            </div>
+            <div class="polowka2">
+                <input type="text" placeholder="Wprowadź nazwę drużyny">
+            </div>
+        </div>
+        <div id="wybor_lig">
+            <h1>👇 Wybierz ligę która ciebie interesuje 👇</h1>
+            <button>IV liga (dolnyśląsk)</button>
+            <h2>Okręgowka</h2>
+            <button>Wrocław</button>
+            <button>Wałbrzych</button>
+            <button>Legnica</button>
+            <button>Jelenia Góra</button>
+            <h2>A-klasa:</h2>
+            <button id="awr">Wrocław</button>
+            <button id="awa">Wałbrzych</button>
+            <button id="al">Legnica</button>
+            <button id="aj">Jelenia Góra</button>
+            <div id="A-klasa_Wroclaw">
+                <h2>A-klasa Wrocław</h2>
+                <button >Gr. 1</button>
+                <button >Gr. 2</button>
+                <button >Gr. 3</button>
+                <button >Gr. 4</button>
+            </div>
+            <div id="A-klasa_Walbrzych">
+                <h2>A-klasa Wałbrzych</h2>
+                <button >Gr. 1</button>
+                <button >Gr. 2</button>
+                <button >Gr. 3</button>
+            </div>
+            <div id="A-klasa_Legnica">
+                <h2>A-klasa Legnica</h2>
+                <button >Gr. 1</button>
+                <button >Gr. 2</button>
+                <button >Gr. 3</button>
+            </div>
+            <div id="A-klasa_Jelenia_Gora">
+                <h2>A-klasa Jelenia Góra</h2>
+                <button >Gr. 1</button>
+                <button >Gr. 2</button>
+                <button >Gr. 3</button>
+            </div>
+            <h2>B-klasa</h2>
+            <button id="bwr">Wrocław</button>
+            <button id="bwa">Wałbrzych</button>
+            <button id="bl">Legnica</button>
+            <button id="bj">Jelenia Góra</button>
+            <div id="B-klasa_Wroclaw">
+                <h2>B-klasa Wroclaw</h2>
+                <button>Gr. 1</button>
+                <button>Gr. 2</button>
+                <button>Gr. 3</button>
+                <button>Gr. 4</button>
+                <button>Gr. 5</button>
+                <button>Gr. 6</button>
+                <button>Gr. 7</button>
+                <button>Gr. 8</button>
+                <button>Gr. 9</button>
+            </div>
+            <div id="B-klasa_Walbrzych">
+                <h2>B-klasa Wałbrzych</h2>
+                <button>Gr. 1</button>
+                <button>Gr. 2</button>
+                <button>Gr. 3</button>
+                <button>Gr. 4</button>
+            </div>
+            <div id="B-klasa_Legnica">
+                <h2>B-klasa Legnica</h2>
+                <button>Gr. 1</button>
+                <button>Gr. 2</button>
+                <button>Gr. 3</button>
+                <button>Gr. 4</button>
+                <button>Gr. 5</button>
+            </div>
+            <div id="B-klasa_Jelenia_Gora">
+                <h2>B-klasa Jelenia Góra</h2>
+                <button>Gr. 1</button>
+                <button>Gr. 2</button>
+                <button>Gr. 3</button>
+                <button>Gr. 4</button>
+                <button>Gr. 5</button>
+            </div>
+
+            <script>
+                $('document').ready(function()
+            {
+                $('#A-klasa_Wroclaw').hide()
+            }
+            );
+            </script>
+            <script>
+                $('document').ready(function()
+            {
+                $('#A-klasa_Walbrzych').hide()
+            }
+            );
+            </script>
+            <script>
+                $('document').ready(function()
+            {
+                $('#A-klasa_Legnica').hide()
+            }
+            );
+            </script>
+            <script>
+                $('document').ready(function()
+            {
+                $('#A-klasa_Jelenia_Gora').hide()
+            }
+            );
+            </script>
+            <script>
+                $('document').ready(function()
+            {
+                $('#B-klasa_Wroclaw').hide()
+            }
+            );
+            </script>
+            <script>
+                $('document').ready(function()
+            {
+                $('#B-klasa_Walbrzych').hide()
+            }
+            );
+            </script>
+            <script>
+                $('document').ready(function()
+            {
+                $('#B-klasa_Legnica').hide()
+            }
+            );
+            </script>
+            <script>
+                $('document').ready(function()
+            {
+                $('#B-klasa_Jelenia_Gora').hide()
+            }
+            );
+            </script>
+            <script>
+                $('#awr').click(function()
+            {
+                $('#A-klasa_Wroclaw').slideToggle()
+            }
+            );
+            </script>
+            <script>
+                $('#awa').click(function()
+            {
+                $('#A-klasa_Walbrzych').slideToggle()
+            }
+            );
+            </script>
+            <script>
+                $('#al').click(function()
+            {
+                $('#A-klasa_Legnica').slideToggle()
+            }
+            );
+            </script>
+            <script>
+                $('#aj').click(function()
+            {
+                $('#A-klasa_Jelenia_Gora').slideToggle()
+            }
+            );
+            </script>
+            <script>
+                $('#bwr').click(function()
+            {
+                $('#B-klasa_Wroclaw').slideToggle()
+            }
+            );
+            </script>
+            <script>
+                $('#bwa').click(function()
+            {
+                $('#B-klasa_Walbrzych').slideToggle()
+            }
+            );
+            </script>
+            <script>
+                $('#bl').click(function()
+            {
+                $('#B-klasa_Legnica').slideToggle()
+            }
+            );
+            </script>
+            <script>
+                $('#bj').click(function()
+            {
+                $('#B-klasa_Jelenia_Gora').slideToggle()
+            }
+            );
+            </script>
+        </div>
+
+        <div id="klipy">
+            <div class="klip_holder">
+                <img src="">
+                <h2>Orzeł 3:0 Lechia</h2>
+            </div>
+            <div class="klip_holder">
+                <img src="">
+                <h2>Skałki 3:0 Górnik</h2>
+            </div>
+            <div class="klip_holder">
+                <img src="">
+                <h2>Tarnowia 3:0 Czarni</h2>
+            </div>
+        </div>
+    </body>
+</html>

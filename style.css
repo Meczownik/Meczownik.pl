@@ -1,0 +1,117 @@
+#header {
+    width: 100%;
+    height: 10vh;
+    background-color: #003726;
+    display: flex;
+    position: relative; 
+}
+
+#header img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 100%;
+}
+
+#header button{
+    width: 15vh;
+    max-width: 100%;
+    background-color: #ffffff00;
+    font-size: large;
+    color: #f1ead3;
+}
+
+#holder_transmisji {
+    width: 100%;
+    height: 70vh;
+    background-color: #D9D9D9;
+    position: relative;
+    text-align: center;
+}
+
+#holder_transmisji img{
+    width: 70%;
+    height: 75%;
+}
+
+#wyszukiwarka{
+    width: 100%;
+    height: 25vh;
+    margin-top: 20vh;
+}
+
+.polowka1{
+    text-align: center;
+    height: 50%;
+}
+
+.polowka2{
+    background-image: url(image/Vector.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.polowka2 input{
+    width: 70vh;
+    height: 5vh;
+    text-align: center;
+    border-radius: 5vh;
+}
+
+#wybor_lig {
+    width: 100%;
+    text-align: center;
+    background-color: #D9D9D9;
+    margin-top: 20vh;
+}
+
+#wybor_lig button{
+    margin-bottom: 1vh;
+    border-radius: 5vh;
+    text-align: center;
+    height: 7vh;
+    width: 20vh;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    font-size: large;
+}
+
+#wybor_lig h2{
+    margin-top: 5vh;
+}
+
+#klipy {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+}
+
+#klipy h2{
+    float: left;
+    margin-left: 5vh;
+    width: 50vh;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    text-align: center;
+;
+}
+
+#klipy img{
+    width: 100%;
+    height: 30vh;
+;
+}
+
+.klip_holder{
+    float: left;
+    width: 30%;
+    text-align: center;
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
