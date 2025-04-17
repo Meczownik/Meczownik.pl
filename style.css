@@ -3,7 +3,7 @@
     height: 10vh;
     background-color: #003726;
     display: flex;
-    position: relative; 
+    position: relative;
 }
 
 #header button{
@@ -34,7 +34,7 @@
 
 #holder_transmisji {
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     background-color: #003726;
     position: relative;
     text-align: center;
@@ -44,7 +44,7 @@
 
 #holder_transmisji img{
     width: 70%;
-    height: 75%;
+    max-height: 75%;
 }
 
 #wyszukiwarka{
@@ -147,7 +147,7 @@
     #header button {
         width: auto;
         margin: 1vh 0;
-        font-size: medium;
+        font-size: large;
     }
 
     #header .logo {
@@ -160,7 +160,6 @@
     #header .social_holder {
         margin-left: 0;
         justify-content: center;
-        width: 100%;
     }
 
     #header .social_holder img {
@@ -170,7 +169,7 @@
 
     #holder_transmisji {
         height: auto;
-        padding: 2vh 0;
+        padding: 2vh 2vh;
     }
 
     #holder_transmisji img {
@@ -195,6 +194,7 @@
 
     #wybor_lig {
         margin-top: 10vh;
+        padding-top: 2vh;
     }
 
     #wybor_lig button {
