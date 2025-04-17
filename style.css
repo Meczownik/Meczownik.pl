@@ -136,3 +136,90 @@
     height: 70%;
 }
 
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 1vh 0;
+    }
+
+    #header button {
+        width: auto;
+        margin: 1vh 0;
+        font-size: medium;
+    }
+
+    #header .logo {
+        position: static;
+        transform: none;
+        height: 8vh;
+        margin: 1vh 0;
+    }
+
+    #header .social_holder {
+        margin-left: 0;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #header .social_holder img {
+        height: 5vh;
+        margin: 0 1vh;
+    }
+
+    #holder_transmisji {
+        height: auto;
+        padding: 2vh 0;
+    }
+
+    #holder_transmisji img {
+        width: 90%;
+        height: auto;
+    }
+
+    #wyszukiwarka {
+        height: auto;
+        margin-top: 10vh;
+    }
+
+    .polowka1, .polowka2 {
+        height: auto;
+        padding: 2vh 0;
+    }
+
+    .polowka2 input {
+        width: 80%;
+        height: 6vh;
+    }
+
+    #wybor_lig {
+        margin-top: 10vh;
+    }
+
+    #wybor_lig button {
+        width: 80%;
+        margin: 1vh 0;
+    }
+
+    .klipy {
+        height: auto;
+        margin-top: 10vh;
+        margin-bottom: 5vh;
+    }
+
+    .klipy h1 {
+        margin-bottom: 5vh;
+    }
+
+    .klip_holder {
+        width: 90%;
+        margin: 2vh auto;
+        float: none;
+    }
+
+    .klipy img {
+        width: 100%;
+        height: auto;
+    }
+}
