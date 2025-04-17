@@ -163,8 +163,8 @@
     }
 
     #header .social_holder img {
-        height: 5vh;
-        margin: 0 1vh;
+        height: 100%;
+        width: 33%;
     }
 
     #holder_transmisji {
