@@ -290,7 +290,8 @@ html, body {
     .klipy h1 {
         width: 100%;
         margin-bottom: 4vh;
-        font-size: x-large;
+        font-size: large;
+        text-wrap: none;
     }
 
     .klip_holder {
