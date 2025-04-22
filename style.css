@@ -1,35 +1,58 @@
-#header {
-    width: 100%;
-    height: 10vh;
-    background-color: #003726;
-    display: flex;
-    position: relative;
+/* --- Style podstawowe (dla większych ekranów) --- */
+
+* { /* Dodano dla lepszego zarządzania wymiarami */
+    box-sizing: border-box;
+    margin: 0; /* Resetowanie domyślnych marginesów */
+    padding: 0; /* Resetowanie domyślnych paddingów */
 }
 
-#header button{
-    width: 15vh;
-    max-width: 100%;
+html, body { /* Upewnij się, że body zajmuje całą wysokość */
+    width: 100%;
+    overflow-x: hidden; /* Zapobiegaj poziomemu przewijaniu */
+}
+
+
+#header {
+    width: 100%;
+    height: 10vh; /* Może być stała wysokość np. 60px dla lepszej kontroli */
+    background-color: #003726;
+    display: flex;
+    align-items: center; /* Wyśrodkuj elementy w pionie */
+    position: relative;
+    padding: 0 10px; /* Dodaj trochę paddingu po bokach */
+}
+
+#header button {
+    width: auto; /* Zamiast stałej szerokości vh, pozwól treści określić szerokość */
+    padding: 10px 15px; /* Użyj paddingu zamiast stałej szerokości */
     background-color: #ffffff00;
     font-size: large;
     color: #f1ead3;
     border: none;
     outline: none;
+    cursor: pointer; /* Dodaj wskaźnik kursora */
+    white-space: nowrap; /* Zapobiegaj łamaniu tekstu przycisku */
 }
 
 #header .logo {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    height: 100%;
+    height: 80%; /* Zmniejsz trochę, aby nie dotykało krawędzi */
+    max-width: 150px; /* Ogranicz maksymalną szerokość logo */
 }
 
-#header .social_holder{
+#header .social_holder {
     display: flex;
-    margin-left: auto;
+    margin-left: auto; /* Przesuwa na prawo */
+    height: 60%; /* Zmniejsz wysokość ikon społecznościowych */
+    align-items: center; /* Wyśrodkuj ikony w pionie */
 }
 
-#header .social_holder img{
+#header .social_holder img {
     height: 100%;
+    margin-left: 10px; /* Dodaj odstęp między ikonami */
+    width: auto; /* Pozwól zachować proporcje */
 }
 
 #holder_transmisji {
@@ -40,236 +63,277 @@
     text-align: center;
     box-shadow: inset 0 0 2vh rgba(0, 0, 0, 0.4);
     color: white;
+    display: flex; /* Użyj flexboxa do wyśrodkowania */
+    flex-direction: column; /* Ułóż elementy w kolumnie */
+    justify-content: center; /* Wyśrodkuj w pionie */
+    align-items: center; /* Wyśrodkuj w poziomie */
+    padding: 20px; /* Dodaj padding */
 }
 
-#holder_transmisji img{
-    width: 70%;
-    max-height: 75%;
+#holder_transmisji img {
+    width: auto; /* Pozwól obrazkowi zachować proporcje */
+    max-width: 70%; /* Ogranicz maksymalną szerokość */
+    max-height: 75%; /* Ogranicz maksymalną wysokość */
+    display: block; /* Usuń dodatkową przestrzeń pod obrazkiem */
+    margin: 0 auto; /* Wyśrodkuj obrazek jeśli flexbox nie działa */
 }
 
-#wyszukiwarka{
+#wyszukiwarka {
     width: 100%;
-    height: 25vh;
-    margin-top: 20vh;
+    /* height: 25vh; - Zamiast stałej wysokości, pozwól treści ją określić */
+    margin-top: 10vh; /* Zmniejsz margines */
 }
 
-.polowka1{
+.polowka1 {
     text-align: center;
-    height: 50%;
+    /* height: 50%; - Niepotrzebne, wysokość będzie zależeć od treści */
+    padding: 20px; /* Dodaj padding */
 }
 
-.polowka2{
+.polowka2 {
     background-color: #003726;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50%;
+    /* height: 50%; - Niepotrzebne */
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 30px 20px; /* Dodaj padding */
 }
 
-.polowka2 input{
-    width: 70vh;
-    height: 5vh;
+.polowka2 input {
+    width: 70%; /* Użyj procentów zamiast vh */
+    max-width: 500px; /* Ogranicz maksymalną szerokość */
+    height: 5vh; /* Można zmienić na stałą wartość np. 45px */
+    min-height: 40px; /* Minimalna wysokość dla czytelności */
     text-align: center;
-    border-radius: 5vh;
+    border-radius: 25px; /* Dopasuj do wysokości */
+    border: none; /* Usuń domyślną ramkę */
+    padding: 5px 15px; /* Dodaj wewnętrzny padding */
 }
 
 #wybor_lig {
     width: 100%;
     text-align: center;
     background-color: #003726;
-    margin-top: 20vh;
+    margin-top: 10vh; /* Zmniejsz margines */
     color: white;
+    padding: 30px 10px; /* Dodaj padding */
 }
 
-#wybor_lig button{
-    margin-bottom: 1vh;
-    border-radius: 2vh;
+#wybor_lig h2 {
+    margin-top: 0; /* Usunięto zbędny margines górny, padding w #wybor_lig wystarczy */
+    margin-bottom: 25px; /* Dodaj odstęp pod nagłówkiem */
+}
+
+#wybor_lig .przyciski-kontener { /* Dodatkowy kontener dla flexboxa */
+    display: flex;
+    flex-wrap: wrap; /* Pozwól przyciskom zawijać się */
+    justify-content: center; /* Wyśrodkuj przyciski */
+    gap: 15px; /* Odstęp między przyciskami */
+}
+
+
+#wybor_lig button {
+    /* margin-bottom: 1vh; */ /* Usunięte na rzecz gap */
+    border-radius: 10px; /* Zmniejsz zaokrąglenie */
     text-align: center;
-    height: 7vh;
-    width: 20vh;
-    margin-left: 5vh;
-    margin-right: 5vh;
-    font-size: large;
-    box-shadow: 1vh 1vh 2vh rgba(0, 0, 0, 0.3);
+    height: auto; /* Wysokość zależna od treści i paddingu */
+    padding: 12px 20px; /* Użyj paddingu dla rozmiaru */
+    width: auto; /* Szerokość zależna od treści i paddingu */
+    min-width: 150px; /* Minimalna szerokość przycisku */
+    /* margin-left: 5vh; */ /* Usunięte na rzecz gap */
+    /* margin-right: 5vh; */ /* Usunięte na rzecz gap */
+    font-size: medium; /* Dostosuj rozmiar czcionki */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Dostosuj cień */
     color: white;
     background-color: black;
     border: solid white 2px;
+    cursor: pointer; /* Dodaj wskaźnik kursora */
+    transition: background-color 0.3s, transform 0.3s; /* Dodaj płynne przejścia */
 }
 
-#wybor_lig h2{
-    margin-top: 5vh;
+#wybor_lig button:hover { /* Efekt po najechaniu */
+    background-color: #333;
+    transform: translateY(-2px);
 }
 
 .klipy {
     width: 100%;
-    height: 50vh;
-    float: left;
-    margin-top: 20vh;
-    margin-bottom: 10vh;
+    /* height: 50vh; */ /* Zamiast stałej wysokości, pozwól treści ją określić */
+    height: auto;
+    /* float: left; */ /* Float nie jest potrzebny */
+    margin-top: 10vh; /* Zmniejsz margines */
+    margin-bottom: 5vh; /* Zmniejsz margines */
     text-align: center;
+    padding: 20px; /* Dodaj padding */
 }
 
-.klipy h1{
-    margin-bottom: 10vh;
+.klipy h1 {
+    margin-bottom: 5vh; /* Zmniejsz margines */
 }
 
-.klipy h2{
-    float: left;
-    width: 50vh;
+/* Usunięto zbędny h2 w .klipy, zakładając że tytuł klipu jest w .klip_holder */
+
+.klipy .klipy-kontener { /* Dodatkowy kontener dla flexboxa */
+    display: flex;
+    flex-wrap: wrap; /* Pozwól klipom się zawijać */
+    justify-content: center; /* Wyśrodkuj klipy */
+    gap: 20px; /* Odstęp między klipami */
+}
+
+.klip_holder {
+    /* float: left; */ /* Usunięto float */
+    width: 30%; /* Szerokość dla większych ekranów */
+    min-width: 280px; /* Minimalna szerokość klipu */
     text-align: center;
+    /* margin-left: 2vh; */ /* Usunięte na rzecz gap */
+    /* margin-right: 2vh; */ /* Usunięte na rzecz gap */
+    /* height: 70%; */ /* Wysokość auto */
+    height: auto;
+    background-color: #f0f0f0; /* Dodaj tło dla lepszej widoczności */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: #333; /* Ustaw kolor tekstu dla kontrastu */
+    margin-bottom: 20px; /* Dodaj margines dolny */
+}
+
+.klip_holder h2 {
+    /* float: left; */ /* Usunięto float */
     width: 100%;
-}
-
-.klipy img{
-    width: 100%;
-    height: 30vh;
-}
-
-.klip_holder{
-    float: left;
-    width: 30%;
     text-align: center;
-    margin-left: 2vh;
-    margin-right: 2vh;
-    height: 70%;
+    margin-bottom: 10px; /* Odstęp pod tytułem klipu */
+    font-size: large; /* Dostosuj rozmiar czcionki */
 }
+
+
+.klip_holder img {
+    width: 100%; /* Obrazek zajmuje całą szerokość kontenera */
+    height: auto; /* Zachowaj proporcje obrazka */
+    /* height: 30vh; */ /* Usunięto stałą wysokość */
+    display: block; /* Usuń dodatkową przestrzeń pod obrazkiem */
+    margin-bottom: 10px; /* Odstęp pod obrazkiem */
+    border-radius: 4px; /* Lekkie zaokrąglenie rogów obrazka */
+}
+
+/* --- Media Query dla telefonów (i mniejszych tabletów) --- */
 
 @media (max-width: 768px) {
-    html {
-        font-size: 15px; /* Nieco mniejsza bazowa czcionka na mobilkach */
-    }
-    :root {
-       --section-spacing-desktop: var(--section-spacing-mobile); /* Używamy mobilnych odstępów */
-    }
-  
+
     #header {
-      flex-direction: column; /* Elementy jeden pod drugim */
-      align-items: center;
-      min-height: auto; /* Wysokość dopasowana do zawartości */
-      padding: 1rem;
-      gap: 1rem; /* Odstęp między logo, nav, social */
+        height: auto; /* Pozwól headerowi dostosować wysokość */
+        min-height: 8vh;
+        flex-wrap: wrap; /* Pozwól elementom się zawinąć */
+        justify-content: center; /* Wyśrodkuj zawinięte elementy */
+        padding: 10px;
     }
-  
-    #header nav { /* Pokazujemy przyciski, jeśli były ukryte */
-       display: flex;
-       flex-direction: column; /* Przyciski jeden pod drugim */
-       align-items: center;
-       width: 100%;
-       gap: 0.5rem;
-       order: 3; /* Kolejność: logo, social, nav */
-    }
-  
-    #header button {
-      width: 90%; /* Szersze przyciski */
-      max-width: 300px;
-      padding: 0.8rem;
-      font-size: 1rem;
-    }
-  
+
     #header .logo {
-      position: static; /* Usuwamy pozycjonowanie absolutne */
-      transform: none;
-      height: 4rem; /* Zmniejszamy logo */
-      max-height: none;
-      margin-bottom: 0.5rem;
-      order: 1; /* Logo na górze */
+        position: static; /* Usuń pozycjonowanie absolutne */
+        transform: none; /* Usuń transformację */
+        height: 5vh; /* Zmniejsz logo */
+        order: -1; /* Ustaw logo jako pierwsze */
+        margin-bottom: 10px; /* Dodaj margines pod logo jeśli się zawinie */
+        max-width: 120px; /* Zmniejsz maksymalną szerokość */
     }
-  
+
+    #header button {
+        font-size: medium; /* Zmniejsz czcionkę przycisków */
+        padding: 8px 10px; /* Zmniejsz padding */
+        margin: 5px; /* Dodaj mały margines wokół przycisków */
+    }
+
     #header .social_holder {
-      margin-left: 0;
-      justify-content: center; /* Wyśrodkowanie ikon */
-      height: 2rem; /* Mniejsze ikony */
-      order: 2; /* Ikony pod logiem */
-      width: 100%; /* Pełna szerokość kontenera */
-      gap: 1.5rem; /* Większy odstęp między ikonami */
+        height: 4vh; /* Zmniejsz ikony social media */
+        margin-left: 0; /* Usuń margines */
+        width: 100%; /* Zajmij całą szerokość */
+        justify-content: center; /* Wyśrodkuj ikony */
+        margin-top: 10px; /* Dodaj odstęp nad ikonami */
     }
-  
+
+     #header .social_holder img {
+        margin: 0 8px; /* Zmniejsz margines między ikonami */
+    }
+
+
     #holder_transmisji {
-      min-height: 50vh; /* Mniejsza minimalna wysokość */
-      padding: 1rem;
+        height: auto; /* Automatyczna wysokość */
+        min-height: 50vh; /* Minimalna wysokość */
+        padding: 15px;
     }
-  
+
     #holder_transmisji img {
-      max-width: 95%; /* Obrazek prawie na całą szerokość */
-      max-height: 45vh;
+        max-width: 90%; /* Zwiększ szerokość obrazka na mniejszych ekranach */
+        max-height: 60vh; /* Ogranicz wysokość */
     }
-  
+
     #wyszukiwarka {
-      margin-top: var(--section-spacing-mobile);
+        margin-top: 8vh; /* Dostosuj margines */
+        height: auto; /* Automatyczna wysokość */
     }
-  
+
     .polowka1, .polowka2 {
-      padding: 2rem 1rem;
+         height: auto; /* Automatyczna wysokość */
+         padding: 20px 15px; /* Dostosuj padding */
     }
-  
+
     .polowka2 input {
-      width: 95%;
-      height: 2.8rem;
+        width: 90%; /* Zwiększ szerokość inputa */
+        height: 40px; /* Stała wysokość */
+        border-radius: 20px; /* Dopasuj border-radius */
     }
-  
+
     #wybor_lig {
-      margin-top: var(--section-spacing-mobile);
-      padding: 2rem 1rem;
+        margin-top: 8vh; /* Dostosuj margines */
+        padding: 20px 10px;
     }
-  
-    .liga-buttons-container {
-        gap: 1rem; /* Mniejszy odstęp na mobilkach */
+
+     #wybor_lig h2 {
+        margin-bottom: 20px;
     }
-  
+
+    #wybor_lig .przyciski-kontener {
+        gap: 10px; /* Zmniejsz odstępy */
+    }
+
     #wybor_lig button {
-      width: 85%; /* Szersze przyciski */
-      max-width: 320px;
-      height: 3.2rem;
+        width: 45%; /* Przyciski obok siebie po dwa */
+        min-width: 120px; /* Zmniejsz minimalną szerokość */
+        padding: 10px 15px;
+        font-size: small; /* Zmniejsz czcionkę */
     }
-  
+
     .klipy {
-      margin-top: var(--section-spacing-mobile);
-      margin-bottom: 3rem;
+        margin-top: 8vh; /* Dostosuj margines */
+        margin-bottom: 4vh; /* Dostosuj margines */
+        padding: 15px;
     }
-  
+
     .klipy h1 {
-      margin-bottom: 2.5rem;
-      font-size: 1.8rem; /* Dostosowanie rozmiaru nagłówka */
+        margin-bottom: 4vh; /* Dostosuj margines */
+        font-size: x-large; /* Zmniejsz nagłówek */
     }
-  
-    .klipy-container {
-        gap: 1.5rem; /* Odstęp na mobilkach */
+
+    .klipy .klipy-kontener {
+        gap: 15px; /* Dostosuj odstępy */
+        flex-direction: column; /* Ułóż klipy w kolumnie */
+        align-items: center; /* Wyśrodkuj klipy w kolumnie */
     }
-  
+
     .klip_holder {
-      flex-basis: 90%; /* Klipy prawie na całą szerokość */
-      min-width: unset; /* Usunięcie minimalnej szerokości */
-      margin: 0 auto; /* Centrowanie */
-      /* Usunięto float: none; bo nie jest już potrzebne */
-      max-width: 450px; /* Ograniczenie szerokości na mobilkach */
+        width: 90%; /* Klip zajmuje prawie całą szerokość */
+        min-width: unset; /* Usuń minimalną szerokość */
+        margin-left: auto; /* Wyśrodkuj */
+        margin-right: auto; /* Wyśrodkuj */
+        margin-bottom: 15px; /* Zaktualizowany margines dolny */
+        /* Pozostałe style .klip_holder dziedziczone lub nadpisane */
     }
-  
-    .klipy img {
-        height: 180px; /* Dostosowanie wysokości obrazka klipu */
+
+     .klip_holder h2 {
+        font-size: medium; /* Zmniejsz czcionkę tytułu klipu */
     }
-  }
-  
-  /* Bardzo małe ekrany */
-  @media (max-width: 480px) {
-      html {
-          font-size: 14px; /* Jeszcze mniejsza czcionka bazowa */
-      }
-       #header .logo {
-          height: 3.5rem;
-       }
-       #header .social_holder {
-          height: 1.8rem;
-       }
-       .polowka2 input {
-          height: 2.5rem;
-       }
-        #wybor_lig button {
-          width: 90%;
-          height: 3rem;
-       }
-       .klipy img {
-          height: 160px;
-       }
-  }
+
+    /* Można dodać więcej reguł lub inne breakpointy (np. dla mniejszych telefonów max-width: 480px) w razie potrzeby */
+
+}
