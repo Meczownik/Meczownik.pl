@@ -284,17 +284,13 @@ html, body {
         margin-top: 8vh;
         margin-bottom: 4vh;
         padding: 15px;
+        justify-items: center;
     }
 
     .klipy h1 {
+        width: 100%;
         margin-bottom: 4vh;
         font-size: x-large;
-    }
-
-    .klipy .klipy-kontener {
-        gap: 15px; 
-        flex-direction: column; 
-        align-items: center; 
     }
 
     .klip_holder {
