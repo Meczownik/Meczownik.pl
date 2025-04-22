@@ -294,11 +294,9 @@ html, body {
     }
 
     .klip_holder {
-        width: 90%; 
-        min-width: unset; 
+        width: 95%; 
         margin-left: auto; 
-        margin-right: auto; 
-        margin-bottom: 15px;
+        margin-right: auto;
     }
 
      .klip_holder h2 {
