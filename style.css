@@ -281,26 +281,37 @@ html, body {
     }
 
     .klipy {
+        display: flex;            /* 1. Ustaw kontener jako Flexbox */
+        flex-direction: column;   /* 2. Ustaw kierunek na pionowy (jedno pod drugim) */
+        align-items: center;      /* 3. Wyśrodkuj elementy w poziomie */
+        gap: 15px;                /* 4. Dodaj odstęp między elementami .klip_holder */
         margin-top: 8vh;
         margin-bottom: 4vh;
         padding: 15px;
-        justify-items: center;
+        /* justify-items: center; Usunięto - nie działa z Flexbox w ten sposób */
     }
 
     .klipy h1 {
-        width: 100%;
-        margin-bottom: 4vh;
-        font-size: large;
-        text-wrap: none;
+        width: 100%;              /* Upewnij się, że H1 zajmuje całą szerokość */
+        text-align: center;       /* Wyśrodkuj tekst w H1 */
+        margin-bottom: 4vh;       /* Zachowano margines dolny */
+        font-size: large;         /* Można dostosować */
+        /* text-wrap: none; - Ta właściwość nie istnieje, jeśli chcesz zapobiec zawijaniu użyj white-space: nowrap; */
+        white-space: normal;      /* Upewnij się, że tekst może się zawijać (domyślne) */
     }
 
     .klip_holder {
-        width: 95%; 
-        margin-left: auto; 
+        width: 95%;               /* Szerokość elementu */
+        /* margin-left: auto;  */ /* Nie są już potrzebne przy align-items: center na rodzicu */
+        /* margin-right: auto; */ /* Ale nie zaszkodzą, jeśli zostaną */
+        /* Dodano marginesy auto dla pewności / kompatybilności */
+        margin-left: auto;
         margin-right: auto;
+        /* Odstępy między elementami są teraz zarządzane przez 'gap' w .klipy */
     }
 
      .klip_holder h2 {
-        font-size: medium; 
+        font-size: medium;
     }
+    /* --- KONIEC ZMIAN --- */
 }
