@@ -296,7 +296,7 @@ html, body {
         text-align: center;       /* Wyśrodkuj tekst w H1 */
         margin-bottom: 4vh;       /* Zachowano margines dolny */
         font-size: large;         /* Można dostosować */
-        /* text-wrap: none; - Ta właściwość nie istnieje, jeśli chcesz zapobiec zawijaniu użyj white-space: nowrap; */
+        white-space: nowrap;
         white-space: normal;      /* Upewnij się, że tekst może się zawijać (domyślne) */
     }
 
