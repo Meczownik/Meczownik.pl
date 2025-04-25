@@ -216,7 +216,8 @@ html, body {
     }
 
     #header button {
-        font-size: medium; 
+        height: 100%;
+        font-size: large; 
         padding: 8px 10px;
         margin: 5px;
     }
@@ -272,9 +273,10 @@ html, body {
 
     #wybor_lig button {
         width: 50%;
+        height: 5vh;
         min-width: 120px;
         padding: 10px 15px;
-        font-size: medium;
+        font-size: large;
         margin-right: 2vh;
         margin-left: 2vh;
         margin-top: 3vh;
@@ -283,23 +285,23 @@ html, body {
 
     .klipy {
         width: 100%;
-        display: flex;            /* Ustaw kontener jako Flexbox */
-        flex-direction: column;   /* Ustaw kierunek na pionowy (jedno pod drugim) */
-        align-items: center;      /* Wyśrodkuj elementy w poziomie */
+        display: flex;           
+        flex-direction: column;   
+        align-items: center;      
         margin-top: 8vh;
         margin-bottom: 4vh;
     }
 
     .klipy h1 {
-        width: 100%;              /* Upewnij się, że H1 zajmuje całą szerokość */
-        text-align: center;       /* Wyśrodkuj tekst w H1 */
-        margin-bottom: 4vh;       /* Zachowano margines dolny */
-        font-size: large;         /* Można dostosować */
-        white-space: nowrap;      /* Zapobiega zawijaniu tekstu */
+        width: 100%;             
+        text-align: center;      
+        margin-bottom: 4vh;      
+        font-size: large;       
+        white-space: nowrap;     
     }
 
     .klip_holder {
-        width: 100%;              /* Pełna szerokość dla każdego .klip_holder */
+        width: 100%;             
         margin-left: auto;
         margin-right: auto;
     }
@@ -309,8 +311,8 @@ html, body {
     }
 
     .klip_holder img {
-        width: 100%;              /* Upewnij się, że obrazki wypełniają kontener */
-        height: auto;             /* Zabezpiecz proporcje obrazka */
-        object-fit: cover;        /* Pokryj obszar bez rozciągania */
+        width: 100%;            
+        height: auto;         
+        object-fit: cover;        
     }
 }
