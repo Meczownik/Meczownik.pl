@@ -223,7 +223,7 @@ html, body {
     }
 
     #header .social_holder {
-        height: 4vh;
+        height: 100%;
         margin-left: 0;
         width: 100%;
         justify-content: center;
@@ -276,7 +276,7 @@ html, body {
         height: 5vh;
         min-width: 120px;
         padding: 10px 15px;
-        font-size: large;
+        font-size: xx-large;
         margin-right: 2vh;
         margin-left: 2vh;
         margin-top: 3vh;
