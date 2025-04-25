@@ -281,14 +281,13 @@ html, body {
     }
 
     .klipy {
-        display: flex;            /* 1. Ustaw kontener jako Flexbox */
-        flex-direction: column;   /* 2. Ustaw kierunek na pionowy (jedno pod drugim) */
-        align-items: center;      /* 3. Wyśrodkuj elementy w poziomie */
-        gap: 15px;                /* 4. Dodaj odstęp między elementami .klip_holder */
+        display: flex;            /* Ustaw kontener jako Flexbox */
+        flex-direction: column;   /* Ustaw kierunek na pionowy (jedno pod drugim) */
+        align-items: center;      /* Wyśrodkuj elementy w poziomie */
+        gap: 15px;                /* Dodaj odstęp między elementami .klip_holder */
         margin-top: 8vh;
         margin-bottom: 4vh;
         padding: 15px;
-        /* justify-items: center; Usunięto - nie działa z Flexbox w ten sposób */
     }
 
     .klipy h1 {
@@ -296,22 +295,22 @@ html, body {
         text-align: center;       /* Wyśrodkuj tekst w H1 */
         margin-bottom: 4vh;       /* Zachowano margines dolny */
         font-size: large;         /* Można dostosować */
-        white-space: nowrap;
-        white-space: normal;      /* Upewnij się, że tekst może się zawijać (domyślne) */
+        white-space: nowrap;      /* Zapobiega zawijaniu tekstu */
     }
 
     .klip_holder {
-        width: 95%;               /* Szerokość elementu */
-        /* margin-left: auto;  */ /* Nie są już potrzebne przy align-items: center na rodzicu */
-        /* margin-right: auto; */ /* Ale nie zaszkodzą, jeśli zostaną */
-        /* Dodano marginesy auto dla pewności / kompatybilności */
+        width: 100%;              /* Pełna szerokość dla każdego .klip_holder */
         margin-left: auto;
         margin-right: auto;
-        /* Odstępy między elementami są teraz zarządzane przez 'gap' w .klipy */
     }
 
      .klip_holder h2 {
         font-size: medium;
     }
-    /* --- KONIEC ZMIAN --- */
+
+    .klip_holder img {
+        width: 100%;              /* Upewnij się, że obrazki wypełniają kontener */
+        height: auto;             /* Zabezpiecz proporcje obrazka */
+        object-fit: cover;        /* Pokryj obszar bez rozciągania */
+    }
 }
